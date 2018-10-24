@@ -26,6 +26,7 @@
     margin-top: 50px;
     flex-direction: column;
     font-family: 'Gloria Hallelujah', cursive;
+    min-height: 540px;
 }
 
 .custom-select {
@@ -39,4 +40,20 @@
 .tracks {
     display: flex;
     justify-content: space-around;
+}
+
+.div_container {
+    position: relative;
+}
+
+.div_background {
+    position: absolute;
+    height: 300px;
+    width: 290px;
+    background-color: rgba(41, 40, 40, 0.3);
+    transition: 0.2s;
+}
+
+.notes_image {
+    background-size: cover;
 }
