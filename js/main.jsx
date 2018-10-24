@@ -8,6 +8,7 @@ import {
     NavLink,
     Redirect
 } from 'react-router-dom';
+import '../sass/style.scss';
 
 
 class Main extends Component {
@@ -66,7 +67,7 @@ class Main extends Component {
                     </div>
 
                     <div className="col-md-4">
-                        <label>
+                        <label className="col-md-12">
                             <input className="btn btn-dark  btn-lg btn-block btn_confirm" type="submit" value="Confirm"></input>
                         </label>
                     </div>

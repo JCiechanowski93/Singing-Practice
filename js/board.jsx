@@ -11,8 +11,8 @@ import {
 
 class Board extends Component {
     state = {
-        top: "10%",
-        left: "5%",
+        top: "",
+        left: "",
         bottom: "",
         right: "",
         width: "",
@@ -28,8 +28,8 @@ class Board extends Component {
 
                 if (this.audio.currentTime >= 0.1) {
                     this.setState({
-                        left: this.state.left,
-                        top: this.state.top,
+                        left: "5%",
+                        top: "10%",
                         display: "block"
                     })
                 }
@@ -173,8 +173,8 @@ class Board extends Component {
             } else if (this.props.match.params.voice === "alt" && this.props.match.params.song === "bellaciao") {
                 if (this.audio.currentTime >= 0.1) {
                     this.setState({
-                        left: this.state.left,
-                        top: this.state.top,
+                        left: "5%",
+                        top: "10%",
                         display: "block"
                     })
                 }
@@ -318,8 +318,8 @@ class Board extends Component {
             } else if (this.props.match.params.voice === "tenor" || this.props.match.params.voice === "bas" && this.props.match.params.song === "bellaciao") {
                 if (this.audio.currentTime >= 0.1) {
                     this.setState({
-                        left: this.state.left,
-                        top: this.state.top,
+                        left: "5%",
+                        top: "10%",
                         display: "block"
                     })
                 }
