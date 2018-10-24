@@ -20,7 +20,7 @@ class Header extends Component {
             <img src="./images/music-player.png" alt="" />
             <img src="./images/music-player-purple.png" alt="" />
             <div className="header_container">
-                <h1>Singing Practice</h1>
+                <h1><a href="#">Singing Practice</a></h1>
             </div>
             <img src="./images/music-player-purple.png" alt="" />
             <img src="./images/music-player.png" alt="" />
@@ -104,7 +104,8 @@ class Board extends Component {
         bottom: "",
         right: "",
         width: "",
-        height: ""
+        height: "",
+        display: ""
     }
 
     handlePlay = () => {
@@ -118,156 +119,452 @@ class Board extends Component {
     }
 
     componentDidMount() {
+
         this.intervalID = setInterval(() => {
             console.log(this.audio.currentTime);
-            if (this.audio.currentTime >= 0) {
-                this.setState({
-                    left: this.state.left,
-                    top: this.state.top
-                })
-            }
-            if (this.audio.currentTime >= 4.4) {
-                this.setState({
-                    left: "31%",
-                    width: "288px"
-                })
-            }
-            if (this.audio.currentTime >= 6.6) {
-                this.setState({
-                    left: "57%",
-                    width: "355px"
-                })
-            }
-            if (this.audio.currentTime >= 8.6) {
-                this.setState({
-                    left: "3%",
-                    top: "40%",
-                    width: "365px",
-                    height: "305px"
-                })
-            }
-            if (this.audio.currentTime >= 10.6) {
-                this.setState({
-                    left: "36%",
-                    top: "40%",
-                    width: "310px",
-                    height: "305px"
-                })
-            }
-            if (this.audio.currentTime >= 12.6) {
-                this.setState({
-                    left: "64%",
-                    top: "40%",
-                    width: "285px",
-                    height: "305px"
-                })
-            }
-            if (this.audio.currentTime >= 15.2) {
-                this.setState({
-                    left: "3%",
-                    top: "70%",
-                    width: "290px",
-                    height: "328px"
-                })
-            }
-            if (this.audio.currentTime >= 17.3) {
-                this.setState({
-                    left: "29%",
-                    top: "70%",
-                    width: "233px",
-                    height: "328px"
-                })
-            }
-            if (this.audio.currentTime >= 19.3) {
-                this.setState({
-                    left: "50%",
-                    top: "70%",
-                    width: "210px",
-                    height: "328px"
-                })
-            }
-            if (this.audio.currentTime >= 21.3) {
-                this.setState({
-                    left: "69%",
-                    top: "70%",
-                    width: "220px",
-                    height: "328px"
-                })
-            }
-            if (this.audio.currentTime >= 23.5) {
-                this.setState({
-                    top: "10%",
-                    left: "31%",
-                    width: "288px"
-                })
-            }
-            if (this.audio.currentTime >= 25.7) {
-                this.setState({
-                    left: "57%",
-                    width: "355px"
-                })
-            }
-            if (this.audio.currentTime >= 27.7) {
-                this.setState({
-                    left: "3%",
-                    top: "40%",
-                    width: "365px",
-                    height: "305px"
-                })
-            }
-            if (this.audio.currentTime >= 29.7) {
-                this.setState({
-                    left: "36%",
-                    top: "40%",
-                    width: "310px",
-                    height: "305px"
-                })
-            }
-            if (this.audio.currentTime >= 31.7) {
-                this.setState({
-                    left: "64%",
-                    top: "40%",
-                    width: "285px",
-                    height: "305px"
-                })
-            }
-            if (this.audio.currentTime >= 34.3) {
-                this.setState({
-                    left: "3%",
-                    top: "70%",
-                    width: "290px",
-                    height: "328px"
-                })
-            }
-            if (this.audio.currentTime >= 36.4) {
-                this.setState({
-                    left: "29%",
-                    top: "70%",
-                    width: "233px",
-                    height: "328px"
-                })
-            }
-            if (this.audio.currentTime >= 38.4) {
-                this.setState({
-                    left: "50%",
-                    top: "70%",
-                    width: "210px",
-                    height: "328px"
-                })
-            }
-            if (this.audio.currentTime >= 40.6) {
-                this.setState({
-                    left: "69%",
-                    top: "70%",
-                    width: "220px",
-                    height: "328px"
-                })
+            if (this.props.match.params.voice === "sopran" && this.props.match.params.song === "bellaciao") {
+
+                if (this.audio.currentTime >= 0.1) {
+                    this.setState({
+                        left: this.state.left,
+                        top: this.state.top,
+                        display: "block"
+
+                    })
+                }
+                if (this.audio.currentTime >= 4.4) {
+                    this.setState({
+                        left: "31%",
+                        width: "288px"
+                    })
+                }
+                if (this.audio.currentTime >= 6.6) {
+                    this.setState({
+                        left: "57%",
+                        width: "355px"
+                    })
+                }
+                if (this.audio.currentTime >= 8.6) {
+                    this.setState({
+                        left: "3%",
+                        top: "40%",
+                        width: "365px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 10.6) {
+                    this.setState({
+                        left: "36%",
+                        top: "40%",
+                        width: "310px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 12.6) {
+                    this.setState({
+                        left: "64%",
+                        top: "40%",
+                        width: "285px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 15.0) {
+                    this.setState({
+                        left: "3%",
+                        top: "70%",
+                        width: "290px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 17.1) {
+                    this.setState({
+                        left: "29%",
+                        top: "70%",
+                        width: "233px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 19.1) {
+                    this.setState({
+                        left: "50%",
+                        top: "70%",
+                        width: "210px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 21.1) {
+                    this.setState({
+                        left: "69%",
+                        top: "70%",
+                        width: "220px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 23.1) {
+                    this.setState({
+                        top: "10%",
+                        left: "31%",
+                        width: "288px"
+                    })
+                }
+                if (this.audio.currentTime >= 25.5) {
+                    this.setState({
+                        left: "57%",
+                        width: "355px"
+                    })
+                }
+                if (this.audio.currentTime >= 27.5) {
+                    this.setState({
+                        left: "3%",
+                        top: "40%",
+                        width: "365px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 29.5) {
+                    this.setState({
+                        left: "36%",
+                        top: "40%",
+                        width: "310px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 31.5) {
+                    this.setState({
+                        left: "64%",
+                        top: "40%",
+                        width: "285px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 34.1) {
+                    this.setState({
+                        left: "3%",
+                        top: "70%",
+                        width: "290px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 36.3) {
+                    this.setState({
+                        left: "29%",
+                        top: "70%",
+                        width: "233px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 38.2) {
+                    this.setState({
+                        left: "50%",
+                        top: "70%",
+                        width: "210px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 40.4) {
+                    this.setState({
+                        left: "69%",
+                        top: "70%",
+                        width: "220px",
+                        height: "328px"
+                    })
+                }
+            } else if (this.props.match.params.voice === "alt" && this.props.match.params.song === "bellaciao") {
+                if (this.audio.currentTime >= 0.1) {
+                    this.setState({
+                        left: this.state.left,
+                        top: this.state.top,
+                        display: "block"
+                    })
+                }
+                if (this.audio.currentTime >= 4.2) {
+                    this.setState({
+                        left: "31%",
+                        width: "288px"
+                    })
+                }
+                if (this.audio.currentTime >= 6.4) {
+                    this.setState({
+                        left: "57%",
+                        width: "355px"
+                    })
+                }
+                if (this.audio.currentTime >= 8.4) {
+                    this.setState({
+                        left: "3%",
+                        top: "40%",
+                        width: "365px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 10.4) {
+                    this.setState({
+                        left: "36%",
+                        top: "40%",
+                        width: "310px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 12.4) {
+                    this.setState({
+                        left: "64%",
+                        top: "40%",
+                        width: "285px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 14.8) {
+                    this.setState({
+                        left: "3%",
+                        top: "70%",
+                        width: "290px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 16.9) {
+                    this.setState({
+                        left: "29%",
+                        top: "70%",
+                        width: "233px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 18.9) {
+                    this.setState({
+                        left: "50%",
+                        top: "70%",
+                        width: "210px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 20.9) {
+                    this.setState({
+                        left: "69%",
+                        top: "70%",
+                        width: "220px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 23.4) {
+                    this.setState({
+                        top: "10%",
+                        left: "31%",
+                        width: "288px"
+                    })
+                }
+                if (this.audio.currentTime >= 25.4) {
+                    this.setState({
+                        left: "57%",
+                        width: "355px"
+                    })
+                }
+                if (this.audio.currentTime >= 27.4) {
+                    this.setState({
+                        left: "3%",
+                        top: "40%",
+                        width: "365px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 29.4) {
+                    this.setState({
+                        left: "36%",
+                        top: "40%",
+                        width: "310px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 31.4) {
+                    this.setState({
+                        left: "64%",
+                        top: "40%",
+                        width: "285px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 33.8) {
+                    this.setState({
+                        left: "3%",
+                        top: "70%",
+                        width: "290px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 35.9) {
+                    this.setState({
+                        left: "29%",
+                        top: "70%",
+                        width: "233px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 37.9) {
+                    this.setState({
+                        left: "50%",
+                        top: "70%",
+                        width: "210px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 39.9) {
+                    this.setState({
+                        left: "69%",
+                        top: "70%",
+                        width: "220px",
+                        height: "328px"
+                    })
+                }
+            } else if (this.props.match.params.voice === "tenor" || this.props.match.params.voice === "bas" && this.props.match.params.song === "bellaciao") {
+                if (this.audio.currentTime >= 0.1) {
+                    this.setState({
+                        left: this.state.left,
+                        top: this.state.top,
+                        display: "block"
+                    })
+                }
+                if (this.audio.currentTime >= 6.2) {
+                    this.setState({
+                        left: "31%",
+                        width: "288px"
+                    })
+                }
+                if (this.audio.currentTime >= 8.4) {
+                    this.setState({
+                        left: "57%",
+                        width: "355px"
+                    })
+                }
+                if (this.audio.currentTime >= 10.4) {
+                    this.setState({
+                        left: "3%",
+                        top: "40%",
+                        width: "365px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 12.4) {
+                    this.setState({
+                        left: "36%",
+                        top: "40%",
+                        width: "310px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 14.4) {
+                    this.setState({
+                        left: "64%",
+                        top: "40%",
+                        width: "285px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 16.8) {
+                    this.setState({
+                        left: "3%",
+                        top: "70%",
+                        width: "290px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 18.9) {
+                    this.setState({
+                        left: "29%",
+                        top: "70%",
+                        width: "233px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 20.9) {
+                    this.setState({
+                        left: "50%",
+                        top: "70%",
+                        width: "210px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 22.9) {
+                    this.setState({
+                        left: "69%",
+                        top: "70%",
+                        width: "220px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 25.4) {
+                    this.setState({
+                        top: "10%",
+                        left: "31%",
+                        width: "288px"
+                    })
+                }
+                if (this.audio.currentTime >= 27.4) {
+                    this.setState({
+                        left: "57%",
+                        width: "355px"
+                    })
+                }
+                if (this.audio.currentTime >= 29.4) {
+                    this.setState({
+                        left: "3%",
+                        top: "40%",
+                        width: "365px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 31.4) {
+                    this.setState({
+                        left: "36%",
+                        top: "40%",
+                        width: "310px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 33.4) {
+                    this.setState({
+                        left: "64%",
+                        top: "40%",
+                        width: "285px",
+                        height: "305px"
+                    })
+                }
+                if (this.audio.currentTime >= 35.8) {
+                    this.setState({
+                        left: "3%",
+                        top: "70%",
+                        width: "290px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 37.9) {
+                    this.setState({
+                        left: "29%",
+                        top: "70%",
+                        width: "233px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 39.9) {
+                    this.setState({
+                        left: "50%",
+                        top: "70%",
+                        width: "210px",
+                        height: "328px"
+                    })
+                }
+                if (this.audio.currentTime >= 41.9) {
+                    this.setState({
+                        left: "69%",
+                        top: "70%",
+                        width: "220px",
+                        height: "328px"
+                    })
+                }
             }
         }, 400);
 
     }
 
-    componentWillUnmount() {
+    handleLinkClick = () => {
         clearInterval(this.intervalID);
     }
 
@@ -277,33 +574,34 @@ class Board extends Component {
         console.log(this.props);
         if (this.props.match.params.voice === "sopran" && this.props.match.params.song === "bellaciao") {
             return (<div className="container">
-                <Link to="/"><img src="./images/reply.png" alt="" /></Link>
+                <Link onClick={this.handleLinkClick} to="/"><img src="./images/reply.png" alt="" /></Link>
                 <div className="tracks">
                     <audio onPlay={this.handlePlay} onPause={this.handlePause} ref={el => this.audio = el} src="./tracks/bella-ciao-sopran.mp3" controls />
                 </div>
                 <div className="div_container">
-                    <div className="div_background" style={{ top: this.state.top, left: this.state.left, width: this.state.width, height: this.state.height }}></div>
+                    <div className="div_background" style={{ top: this.state.top, left: this.state.left, width: this.state.width, height: this.state.height, display: this.state.display }}></div>
                     <img className="notes_image" src="./images/bellaciao.jpg" alt="" />
                 </div>
             </div>)
         } else if (this.props.match.params.voice === "alt" && this.props.match.params.song === "bellaciao") {
             return (<div className="container">
-                <Link to="/"> <img src="./images/reply.png" alt="" /></Link>
+                <Link onClick={this.handleLinkClick} to="/"> <img src="./images/reply.png" alt="" /></Link>
                 <div className="tracks">
-                    <audio ref="" src="./tracks/bella-ciao-alt.mp3" controls />
+                    <audio ref={el => this.audio = el} src="./tracks/bella-ciao-alt.mp3" controls />
                 </div>
-                <div>
-                    <img src="./images/bellaciao.jpg" alt="" />
+                <div className="div_container">
+                    <div className="div_background" style={{ top: this.state.top, left: this.state.left, width: this.state.width, height: this.state.height, display: this.state.display }}></div>
+                    <img className="notes_image" src="./images/bellaciao.jpg" alt="" />
                 </div>
             </div>)
         } else if (this.props.match.params.voice === "tenor" || this.props.match.params.voice === "bas" && this.props.match.params.song === "bellaciao") {
             return (<div className="container">
-                <Link to="/"><img src="./images/reply.png" alt="" /> </Link>
+                <Link onClick={this.handleLinkClick} to="/"><img src="./images/reply.png" alt="" /> </Link>
                 <div className="tracks">
                     <audio ref={el => this.audio = el} src="./tracks/bella-ciao-bas.mp3" controls />
                 </div>
                 <div className="div_container">
-                    <div className="div_background" style={{ top: this.state.top, left: this.state.left, width: this.state.width }}></div>
+                    <div className="div_background" style={{ top: this.state.top, left: this.state.left, width: this.state.width, height: this.state.height, display: this.state.display }}></div>
                     <img className="notes_image" src="./images/bellaciao.jpg" alt="" />
                 </div>
             </div>)
@@ -314,9 +612,14 @@ class Board extends Component {
 class Footer extends Component {
     state = {}
     render() {
-        return (<div>
-            <h1>Footer</h1>
-        </div>);
+        return (<footer className="footer">
+            <div>
+                Jakub Ciechanowski &copy;
+            </div>
+            <div>
+                The ownership of notes and tracks: Cantiamo Tutto Choir
+            </div>
+        </footer>);
     }
 }
 
