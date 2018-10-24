@@ -8,16 +8,29 @@ import {
     NavLink,
     Redirect
 } from 'react-router-dom';
-// import './../sass/style.scss';
+import '../sass/style.scss';
 import 'bootstrap/dist/css/bootstrap.css'
 
 
 class Header extends Component {
     state = {}
     render() {
-        return (<div>
-            <h1>Header</h1>
-        </div>);
+        return (<header className="header">
+            <img src="./images/musical-note.png" alt="" />
+            <img src="./images/music-player.png" alt="" />
+            <img src="./images/music-player-purple.png" alt="" />
+
+            <div className="header_container">
+
+                <h1>Singing Practice</h1>
+            </div>
+            <img src="./images/music-player-purple.png" alt="" />
+            <img src="./images/music-player.png" alt="" />
+            <img src="./images/musical-note.png" alt="" />
+
+
+
+        </header>);
     }
 }
 
@@ -26,7 +39,7 @@ class Header extends Component {
 class Main extends Component {
     state = {
         song: "bellaciao",
-        voice: "",
+        voice: "sopran",
         redirect: ""
     }
 
@@ -55,18 +68,18 @@ class Main extends Component {
         if (this.state.redirect !== "") {
             return <Redirect to={this.state.redirect} />
         }
-        return (<div>
+        return (<main className="container main_container">
 
             <form onSubmit={this.handleSubmit}>
                 <div className="row">
-                    <div className="col-md-2">
+                    <div className="col-md-4">
                         <label>  <h4>Choose your song</h4>
                             <select className="form-control custom-select" onChange={this.handleSongChange} value={this.state.song}>
                                 <option value="bellaciao">Bella Ciao</option>
                             </select>
                         </label>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-4">
                         <label><h4>Choose your singing voice</h4>
                             <select className="form-control custom-select" onChange={this.handleVoiceChange} value={this.state.voice}>
                                 <option value="sopran">Sopran</option>
@@ -77,14 +90,14 @@ class Main extends Component {
                         </label>
                     </div>
 
-                    <div className="col-md-12">
-                        <label className="col-md-3">
-                            <input className="btn btn-dark  btn-lg btn-block" type="submit" value="Confirm"></input>
+                    <div className="col-md-4">
+                        <label>
+                            <input className="btn btn-dark  btn-lg btn-block btn_confirm" type="submit" value="Confirm"></input>
                         </label>
                     </div>
                 </div>
             </form>
-        </div>);
+        </main>);
     }
 }
 
@@ -93,11 +106,36 @@ class Board extends Component {
     state = {}
     render() {
         console.log(this.props);
-        if (this.props.match.params.song === "bellaciao") {
-            return <div>
-                <img src="./images/bellaciao.jpg" alt="" />
-                <audio ref="" src="./tracks/bellaciaoalt.mp3" controls autoPlay />
-            </div>
+        if (this.props.match.params.voice === "sopran" && this.props.match.params.song === "bellaciao") {
+            return (<div className="container">
+                <Link to="/"><img src="./images/reply.png" alt="" /></Link>
+                <div className="tracks">
+                    <audio ref="" src="./tracks/bella-ciao-sopran.mp3" controls />
+                </div>
+                <div>
+                    <img src="./images/bellaciao.jpg" alt="" />
+                </div>
+            </div>)
+        } else if (this.props.match.params.voice === "alt" && this.props.match.params.song === "bellaciao") {
+            return (<div className="container">
+                <Link to="/"> <img src="./images/reply.png" alt="" /></Link>
+                <div className="tracks">
+                    <audio ref="" src="./tracks/bella-ciao-alt.mp3" controls />
+                </div>
+                <div>
+                    <img src="./images/bellaciao.jpg" alt="" />
+                </div>
+            </div>)
+        } else if (this.props.match.params.voice === "tenor" || this.props.match.params.voice === "bas" && this.props.match.params.song === "bellaciao") {
+            return (<div className="container">
+                <Link to="/"><img src="./images/reply.png" alt="" /> </Link>
+                <div className="tracks">
+                    <audio ref="" src="./tracks/bella-ciao-bas.mp3" controls />
+                </div>
+                <div>
+                    <img src="./images/bellaciao.jpg" alt="" />
+                </div>
+            </div>)
         }
     }
 }

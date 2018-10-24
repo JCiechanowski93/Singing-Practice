@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {}
+
+.header {
+    height: 70px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    max-width: 100vw;
+
+    h1 {
+        color: white;
+        font-family: 'Gloria Hallelujah', cursive;
+        padding-top: 5px;
+    }
+}
+
+.header_container {}
+
+.main_container {
+    margin-top: 50px;
+    flex-direction: column;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.custom-select {
+    margin-top: 5px;
+}
+
+.btn_confirm {
+    margin-top: 25px;
+}
+
+.tracks {
+    display: flex;
+    justify-content: space-around;
+}
