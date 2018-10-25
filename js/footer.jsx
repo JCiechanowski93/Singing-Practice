@@ -18,7 +18,7 @@ class Footer extends Component {
             </div>
             <div className="cantiamoTutto">
                 <div>
-                    The ownership of sheet music and tracks: Cantiamo Tutto Choir
+                    The ownership of sheet music and tracks: Cantiamo Tutto
                 </div>
                 <div>
                     <a href="https://www.facebook.com/CantiamoTutto/"><img src="./images/cantiamotutto.jpg" alt="" /></a>
