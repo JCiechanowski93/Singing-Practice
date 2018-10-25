@@ -7,8 +7,9 @@ class Footer extends Component {
         return (<footer className="footer">
             <div className="myProfile">
                 <div>
-                    Jakub Ciechanowski &copy;
+                    Jakub Ciechanowski
                 </div>
+                <div><i className="far fa-copyright"></i></div>
                 <div>
                     <a href="https://www.linkedin.com/in/jakub-ciechanowski/"><i className="fab fa-linkedin"></i></a>
                 </div>

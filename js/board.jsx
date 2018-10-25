@@ -13,12 +13,10 @@ class Board extends Component {
     state = {
         top: "",
         left: "",
-        bottom: "",
-        right: "",
         width: "",
         height: "",
         display: "",
-        img: this.props.match.params.song
+        img: this.props.match.params.song,
     }
 
     componentDidMount() {
@@ -29,7 +27,7 @@ class Board extends Component {
             console.log(this.audio.currentTime);
             if (this.props.match.params.voice === "sopran" && this.props.match.params.song === "bellaciao") {
 
-                if (this.audio.currentTime >= 0.1) { //switch (this.audio) case: >=
+                if (this.audio.currentTime >= 0.1) {
                     this.setState({
                         left: "5%",
                         top: "10%",
@@ -55,6 +53,9 @@ class Board extends Component {
                         width: "365px",
                         height: "305px"
                     })
+                    if (this.audio.currentTime <= 8.95) {
+                        window.scrollTo(300, 300)
+                    }
                 }
                 if (this.audio.currentTime >= 10.6) {
                     this.setState({
@@ -79,6 +80,9 @@ class Board extends Component {
                         width: "290px",
                         height: "328px"
                     })
+                    if (this.audio.currentTime <= 15.4) {
+                        window.scrollTo(550, 550)
+                    }
                 }
                 if (this.audio.currentTime >= 17.1) {
                     this.setState({
@@ -108,8 +112,11 @@ class Board extends Component {
                     this.setState({
                         top: "10%",
                         left: "31%",
-                        width: "288px"
+                        width: "288px",
                     })
+                    if (this.audio.currentTime <= 23.5) {
+                        window.scrollTo(0, 0)
+                    }
                 }
                 if (this.audio.currentTime >= 25.5) {
                     this.setState({
@@ -124,6 +131,9 @@ class Board extends Component {
                         width: "365px",
                         height: "305px"
                     })
+                    if (this.audio.currentTime <= 27.9) {
+                        window.scrollTo(300, 300)
+                    }
                 }
                 if (this.audio.currentTime >= 29.5) {
                     this.setState({
@@ -148,6 +158,9 @@ class Board extends Component {
                         width: "290px",
                         height: "328px"
                     })
+                    if (this.audio.currentTime <= 34.5) {
+                        window.scrollTo(550, 550)
+                    }
                 }
                 if (this.audio.currentTime >= 36.3) {
                     this.setState({
@@ -200,6 +213,9 @@ class Board extends Component {
                         width: "365px",
                         height: "305px"
                     })
+                    if (this.audio.currentTime <= 8.95) {
+                        window.scrollTo(300, 300)
+                    }
                 }
                 if (this.audio.currentTime >= 10.4) {
                     this.setState({
@@ -224,6 +240,9 @@ class Board extends Component {
                         width: "290px",
                         height: "328px"
                     })
+                    if (this.audio.currentTime <= 15.4) {
+                        window.scrollTo(550, 550)
+                    }
                 }
                 if (this.audio.currentTime >= 16.9) {
                     this.setState({
@@ -255,6 +274,9 @@ class Board extends Component {
                         left: "31%",
                         width: "288px"
                     })
+                    if (this.audio.currentTime <= 23.8) {
+                        window.scrollTo(0, 0)
+                    }
                 }
                 if (this.audio.currentTime >= 25.4) {
                     this.setState({
@@ -269,6 +291,9 @@ class Board extends Component {
                         width: "365px",
                         height: "305px"
                     })
+                    if (this.audio.currentTime <= 27.9) {
+                        window.scrollTo(300, 300)
+                    }
                 }
                 if (this.audio.currentTime >= 29.4) {
                     this.setState({
@@ -293,6 +318,9 @@ class Board extends Component {
                         width: "290px",
                         height: "328px"
                     })
+                    if (this.audio.currentTime <= 34.5) {
+                        window.scrollTo(550, 550)
+                    }
                 }
                 if (this.audio.currentTime >= 35.9) {
                     this.setState({
@@ -337,6 +365,7 @@ class Board extends Component {
                         left: "57%",
                         width: "355px"
                     })
+
                 }
                 if (this.audio.currentTime >= 10.4) {
                     this.setState({
@@ -345,6 +374,9 @@ class Board extends Component {
                         width: "365px",
                         height: "305px"
                     })
+                    if (this.audio.currentTime <= 10.9) {
+                        window.scrollTo(300, 300)
+                    }
                 }
                 if (this.audio.currentTime >= 12.4) {
                     this.setState({
@@ -369,6 +401,9 @@ class Board extends Component {
                         width: "290px",
                         height: "328px"
                     })
+                    if (this.audio.currentTime <= 17.4) {
+                        window.scrollTo(550, 550)
+                    }
                 }
                 if (this.audio.currentTime >= 18.9) {
                     this.setState({
@@ -400,6 +435,9 @@ class Board extends Component {
                         left: "31%",
                         width: "288px"
                     })
+                    if (this.audio.currentTime <= 25.8) {
+                        window.scrollTo(0, 0)
+                    }
                 }
                 if (this.audio.currentTime >= 27.4) {
                     this.setState({
@@ -414,6 +452,9 @@ class Board extends Component {
                         width: "365px",
                         height: "305px"
                     })
+                    if (this.audio.currentTime <= 29.9) {
+                        window.scrollTo(300, 300)
+                    }
                 }
                 if (this.audio.currentTime >= 31.4) {
                     this.setState({
@@ -438,6 +479,9 @@ class Board extends Component {
                         width: "290px",
                         height: "328px"
                     })
+                    if (this.audio.currentTime <= 36.5) {
+                        window.scrollTo(550, 550)
+                    }
                 }
                 if (this.audio.currentTime >= 37.9) {
                     this.setState({
@@ -464,7 +508,11 @@ class Board extends Component {
                     })
                 }
             }
-            else if (this.props.match.params.voice === "sopran" && this.props.match.params.song === "lollipop") {
+            else if (this.props.match.params.voice === "sopran"
+                || this.props.match.params.voice === "alt"
+                || this.props.match.params.voice === "tenor"
+                || this.props.match.params.voice === "bas"
+                && this.props.match.params.song === "lollipop") {
 
                 if (this.audio.currentTime >= 0) {
                     this.setState({
@@ -505,7 +553,7 @@ class Board extends Component {
                         top: "3%",
                         width: "220px",
                         height: "300px",
-                        display: "block"
+                        display: "block",
                     })
                 }
 

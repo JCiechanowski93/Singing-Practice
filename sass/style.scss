@@ -71,6 +71,7 @@
 
 .notes_image {
     background-size: cover;
+    transition: 0.5s;
 }
 
 .footer {
@@ -109,6 +110,10 @@
     width: 450px;
 }
 
+.fa-copyright {
+    font-size: 12px;
+}
+
 .fa-linkedin {
     color: #0077B5;
     font-size: 30px;
@@ -119,3 +124,17 @@
     font-size: 30px;
     color: #fff;
 }
+
+// $fiveColors : (yellowColor: yellow,
+// blueColor: blue,
+// greenColor: green,
+// blackColor: black,
+// pinkColor: pink);
+
+// $list : map-values($fiveColors);
+
+// @for $i from 1 to 16 {
+//     span#{i} {
+//         color: $list
+//     }
+// }
