@@ -8,6 +8,15 @@ import {
     NavLink,
     Redirect
 } from 'react-router-dom';
+import reply from './../images/reply.png'
+
+import * as tracks from "../tracks"
+import * as notesImg from "../images"
+
+console.log(tracks);
+console.log(notesImg);
+
+
 
 class Board extends Component {
     state = {
@@ -16,7 +25,7 @@ class Board extends Component {
         width: "",
         height: "",
         display: "",
-        img: this.props.match.params.song,
+        img: this.props.match.params.song[0].toUpperCase() + this.props.match.params.song.substr(1)
     }
 
     componentDidMount() {
@@ -651,7 +660,7 @@ class Board extends Component {
                 }
                 if (this.audio.currentTime >= 43) {
                     this.setState({
-                        img: "lollipop-2",
+                        img: "Lollipop2",
                         left: "4%",
                         top: "1%",
                         width: "320px",
@@ -768,7 +777,7 @@ class Board extends Component {
             }
             if (this.audio.currentTime >= 81) {
                 this.setState({
-                    img: "lollipop-3",
+                    img: "Lollipop3",
                     left: "4%",
                     top: "1%",
                     width: "335px",
@@ -894,14 +903,23 @@ class Board extends Component {
     }
 
     render() {
+
+        const trackName = this.props.match.params.song[0].toUpperCase() + this.props.match.params.song.substr(1) + this.props.match.params.voice[0].toUpperCase() + this.props.match.params.voice.substr(1)
+        console.log(trackName);
+
+
+        console.log(this.state.img + "STATE");
+
+
+
         return (<div className="container">
-            <Link onClick={this.handleLinkClick} to="/"><img src="./images/reply.png" alt="" /></Link>
+            <Link onClick={this.handleLinkClick} to="/"><img src={reply} alt="" /></Link>
             <div className="tracks">
-                <audio ref={el => this.audio = el} src={`./tracks/${this.props.match.params.song}-${this.props.match.params.voice}.mp3`} controls />
+                <audio ref={el => this.audio = el} src={tracks[trackName]} controls />
             </div>
             <div className="div_container">
                 <div className="div_background" style={{ top: this.state.top, left: this.state.left, width: this.state.width, height: this.state.height, display: this.state.display }}></div>
-                <img className="notes_image" src={`./images/${this.state.img}.jpg`} alt="" />
+                <img className="notes_image" src={notesImg[this.state.img]} alt="" />
             </div>
         </div>)
 

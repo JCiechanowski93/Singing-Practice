@@ -1,0 +1,8 @@
+{
+    "plugins": [
+        ["wildcard", {
+            "exts": ["js", "es6", "es", "jsx", "javascript", "mp3", "jpg"],
+            "useCamelCase": false
+        }]
+    ]
+}

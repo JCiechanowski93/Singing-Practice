@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import cantiamo from './../images/cantiamotutto.jpg'
 
 class Footer extends Component {
     state = {}
@@ -22,7 +23,7 @@ class Footer extends Component {
                     The ownership of sheet music and tracks: Cantiamo Tutto
                 </div>
                 <div>
-                    <a href="https://www.facebook.com/CantiamoTutto/"><img src="./images/cantiamotutto.jpg" alt="" /></a>
+                    <a href="https://www.facebook.com/CantiamoTutto/"><img src={cantiamo} alt="" /></a>
                 </div>
             </div>
         </footer>);

@@ -35,6 +35,17 @@ module.exports = function (env) {
                     }
                 },
                 {
+                    test: /\.mp3$/,
+                    use: {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            publicPath: 'tracks',
+                            outputPath: 'tracks'
+                        }
+                    }
+                },
+                {
                     test: /\.js$/,
                     exclude: /node_modules/,
                     use: {
