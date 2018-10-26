@@ -564,6 +564,9 @@ class Board extends Component {
                         height: "310px",
                         width: "255px",
                     })
+                    if (this.audio.currentTime <= 12.3) {
+                        window.scrollTo(300, 300)
+                    }
                 }
                 if (this.audio.currentTime >= 14.2) {
                     this.setState({
@@ -596,6 +599,9 @@ class Board extends Component {
                         width: "330px",
                         height: "405px"
                     })
+                    if (this.audio.currentTime <= 23.8) {
+                        window.scrollTo(600, 600)
+                    }
                 }
                 if (this.audio.currentTime >= 26) {
                     this.setState({
@@ -621,6 +627,9 @@ class Board extends Component {
                         top: "73%",
                         width: "360px"
                     })
+                    if (this.audio.currentTime <= 33.5) {
+                        window.scrollTo(1100, 1100)
+                    }
                 }
                 if (this.audio.currentTime >= 35.5) {
                     this.setState({
@@ -628,7 +637,7 @@ class Board extends Component {
                         width: "247px"
                     })
                 }
-                if (this.audio.currentTime >= 38) {
+                if (this.audio.currentTime >= 37.5) {
                     this.setState({
                         left: "58.5%",
                         width: "210px"
@@ -640,7 +649,7 @@ class Board extends Component {
                         width: "240px"
                     })
                 }
-                if (this.audio.currentTime >= 41) {
+                if (this.audio.currentTime >= 43) {
                     this.setState({
                         img: "lollipop-2",
                         left: "4%",
@@ -649,6 +658,9 @@ class Board extends Component {
                         height: "370px"
 
                     })
+                    if (this.audio.currentTime <= 43.5) {
+                        window.scrollTo(0, 0)
+                    }
                 }
                 if (this.audio.currentTime >= 45.5) {
                     this.setState({
@@ -674,6 +686,9 @@ class Board extends Component {
                         top: "26%",
                         width: "355px"
                     })
+                    if (this.audio.currentTime <= 53) {
+                        window.scrollTo(300, 300)
+                    }
                 }
                 if (this.audio.currentTime >= 54.5) {
                     this.setState({
@@ -699,156 +714,176 @@ class Board extends Component {
                         top: "50%",
                         width: "285px"
                     })
-                }
-                if (this.audio.currentTime >= 64.5) {
-                    this.setState({
-                        left: "29.5%",
-                        width: "235px"
-                    })
-                }
-                if (this.audio.currentTime >= 67) {
-                    this.setState({
-                        left: "50.5%",
-                        width: "342px"
-                    })
-                }
-                if (this.audio.currentTime >= 69.3) {
-                    this.setState({
-                        left: "81%",
-                        width: "195px"
-                    })
-                }
-                if (this.audio.currentTime >= 71.7) {
-                    this.setState({
-                        left: "4%",
-                        top: "75%",
-                        width: "355px"
-                    })
-                }
-                if (this.audio.currentTime >= 74) {
-                    this.setState({
-                        left: "35.7%",
-                        width: "278px"
-                    })
-                }
-                if (this.audio.currentTime >= 76.5) {
-                    this.setState({
-                        left: "60.6%",
-                        width: "208px"
-                    })
-                }
-                if (this.audio.currentTime >= 79) {
-                    this.setState({
-                        left: "79.2%",
-                        width: "214px"
-                    })
-                }
-                if (this.audio.currentTime >= 81) {
-                    this.setState({
-                        img: "lollipop-3",
-                        left: "4%",
-                        top: "1%",
-                        width: "335px",
-                        height: "370px"
-                    })
-                }
-                if (this.audio.currentTime >= 84) {
-                    this.setState({
-                        left: "34%",
-                        width: "210px"
-                    })
-                }
-                if (this.audio.currentTime >= 86) {
-                    this.setState({
-                        left: "53%",
-                        width: "273px"
-                    })
-                }
-                if (this.audio.currentTime >= 88) {
-                    this.setState({
-                        left: "77.5%",
-                        width: "240px"
-                    })
-                }
-                if (this.audio.currentTime >= 91) {
-                    this.setState({
-                        left: "4%",
-                        top: "26%",
-                        width: "338px"
-                    })
-                }
-                if (this.audio.currentTime >= 93.5) {
-                    this.setState({
-                        left: "34.5%",
-                        width: "245px"
-                    })
-                }
-                if (this.audio.currentTime >= 95.5) {
-                    this.setState({
-                        left: "56.5%",
-                        width: "285px"
-                    })
-                }
-                if (this.audio.currentTime >= 98) {
-                    this.setState({
-                        left: "82%",
-                        width: "190px"
-                    })
-                }
-                if (this.audio.currentTime >= 101) {
-                    this.setState({
-                        left: "4%",
-                        top: "52%",
-                        width: "330px",
-                        height: "310px"
-                    })
-                }
-                if (this.audio.currentTime >= 103.2) {
-                    this.setState({
-                        left: "33.7%",
-                        width: "224px"
-                    })
-                }
-                if (this.audio.currentTime >= 105) {
-                    this.setState({
-                        left: "54%",
-                        width: "273px"
-                    })
-                }
-                if (this.audio.currentTime >= 107.5) {
-                    this.setState({
-                        left: "78.5%",
-                        width: "225px"
-                    })
-                }
-                if (this.audio.currentTime >= 110) {
-                    this.setState({
-                        left: "4%",
-                        top: "75%",
-                        width: "368px",
-                        height: "330px"
-                    })
-                }
-                if (this.audio.currentTime >= 112.5) {
-                    this.setState({
-                        left: "37%",
-                        width: "252px"
-                    })
-                }
-                if (this.audio.currentTime >= 114.7) {
-                    this.setState({
-                        left: "59.5%",
-                        width: "244px"
-                    })
-                }
-                if (this.audio.currentTime >= 117) {
-                    this.setState({
-                        left: "81.5%",
-                        width: "200px"
-                    })
+                    if (this.audio.currentTime <= 62.5) {
+                        window.scrollTo(650, 650)
+                    }
                 }
 
             }
+            if (this.audio.currentTime >= 64.5) {
+                this.setState({
+                    left: "29.5%",
+                    width: "235px"
+                })
+            }
+            if (this.audio.currentTime >= 67) {
+                this.setState({
+                    left: "50.5%",
+                    width: "342px"
+                })
+            }
+            if (this.audio.currentTime >= 69.3) {
+                this.setState({
+                    left: "81%",
+                    width: "195px"
+                })
+            }
+            if (this.audio.currentTime >= 71.7) {
+                this.setState({
+                    left: "4%",
+                    top: "75%",
+                    width: "355px"
+                })
+                if (this.audio.currentTime <= 72.3) {
+                    window.scrollTo(1100, 1100)
+                }
+            }
+            if (this.audio.currentTime >= 74) {
+                this.setState({
+                    left: "35.7%",
+                    width: "278px"
+                })
+            }
+            if (this.audio.currentTime >= 76.5) {
+                this.setState({
+                    left: "60.6%",
+                    width: "208px"
+                })
+            }
+            if (this.audio.currentTime >= 79) {
+                this.setState({
+                    left: "79.2%",
+                    width: "214px"
+                })
+            }
+            if (this.audio.currentTime >= 81) {
+                this.setState({
+                    img: "lollipop-3",
+                    left: "4%",
+                    top: "1%",
+                    width: "335px",
+                    height: "370px"
+                })
+                if (this.audio.currentTime <= 81.3) {
+                    window.scrollTo(0, 0)
+                }
+            }
+            if (this.audio.currentTime >= 84) {
+                this.setState({
+                    left: "34%",
+                    width: "210px"
+                })
+            }
+            if (this.audio.currentTime >= 86) {
+                this.setState({
+                    left: "53%",
+                    width: "273px"
+                })
+            }
+            if (this.audio.currentTime >= 88) {
+                this.setState({
+                    left: "77.5%",
+                    width: "240px"
+                })
+            }
+            if (this.audio.currentTime >= 91) {
+                this.setState({
+                    left: "4%",
+                    top: "26%",
+                    width: "338px"
+                })
+                if (this.audio.currentTime <= 91.5) {
+                    window.scrollTo(300, 300)
+                }
+            }
+            if (this.audio.currentTime >= 93.5) {
+                this.setState({
+                    left: "34.5%",
+                    width: "245px"
+                })
+            }
+            if (this.audio.currentTime >= 95.5) {
+                this.setState({
+                    left: "56.5%",
+                    width: "285px"
+                })
+            }
+            if (this.audio.currentTime >= 98) {
+                this.setState({
+                    left: "82%",
+                    width: "190px"
+                })
+            }
+            if (this.audio.currentTime >= 101) {
+                this.setState({
+                    left: "4%",
+                    top: "52%",
+                    width: "330px",
+                    height: "310px"
+                })
+                if (this.audio.currentTime <= 101.5) {
+                    window.scrollTo(650, 650)
+                }
+            }
+            if (this.audio.currentTime >= 103.2) {
+                this.setState({
+                    left: "33.7%",
+                    width: "224px"
+                })
+            }
+            if (this.audio.currentTime >= 105) {
+                this.setState({
+                    left: "54%",
+                    width: "273px"
+                })
+            }
+            if (this.audio.currentTime >= 107.5) {
+                this.setState({
+                    left: "78.5%",
+                    width: "225px"
+                })
+            }
+            if (this.audio.currentTime >= 110) {
+                this.setState({
+                    left: "4%",
+                    top: "75%",
+                    width: "368px",
+                    height: "330px"
+                })
+                if (this.audio.currentTime <= 110.5) {
+                    window.scrollTo(1100, 1100)
+                }
+            }
+            if (this.audio.currentTime >= 112.5) {
+                this.setState({
+                    left: "37%",
+                    width: "252px"
+                })
+            }
+            if (this.audio.currentTime >= 114.7) {
+                this.setState({
+                    left: "59.5%",
+                    width: "244px"
+                })
+            }
+            if (this.audio.currentTime >= 117) {
+                this.setState({
+                    left: "81.5%",
+                    width: "200px"
+                })
+            }
+
+
 
 
         }, 400);

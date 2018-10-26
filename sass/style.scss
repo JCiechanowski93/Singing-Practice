@@ -29,8 +29,8 @@
     }
 
     img {
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
@@ -39,7 +39,7 @@
 .main_container {
     margin-top: 50px;
     font-family: 'Gloria Hallelujah', cursive;
-    min-height: 601px;
+    min-height: 520px;
 
 }
 
@@ -125,16 +125,38 @@
     color: #fff;
 }
 
-// $fiveColors : (yellowColor: yellow,
-// blueColor: blue,
-// greenColor: green,
-// blackColor: black,
-// pinkColor: pink);
+$fiveColors : (redColor: #dc143c,
+goldColor: #daa520,
+purpleColor: #9370db);
 
-// $list : map-values($fiveColors);
+span {
+    animation: changeColor 10s infinite;
+}
+
+$list : map-values($fiveColors);
+
+@keyframes changeColor {
+    0% {
+        color: #fff;
+    }
+
+    25% {
+        color: #dc143c;
+    }
+
+    50% {
+        color: #daa520
+    }
+
+    75% {
+        color: #9370db
+    }
+}
+
+
 
 // @for $i from 1 to 16 {
-//     span#{i} {
-//         color: $list
+//     span:nth-child(#{$i}) {
+//         color: nth($list, ($i % 3) + 1)
 //     }
 // }
