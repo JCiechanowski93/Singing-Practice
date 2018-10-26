@@ -129,34 +129,25 @@ $fiveColors : (redColor: #dc143c,
 goldColor: #daa520,
 purpleColor: #9370db);
 
-span {
-    animation: changeColor 10s infinite;
-}
 
 $list : map-values($fiveColors);
 
-@keyframes changeColor {
-    0% {
-        color: #fff;
-    }
-
-    25% {
-        color: #dc143c;
-    }
-
-    50% {
-        color: #daa520
-    }
-
-    75% {
-        color: #9370db
+@for $i from 1 to 16 {
+    span:nth-child(#{$i}) {
+        // color: nth($list, ($i % 3) + 1)
+        animation: changeColor#{($i % 3) + 1} 3s infinite;
+        animation-delay: #{random(3)}s
     }
 }
 
+@for $i from 1 to 4 {
+    @keyframes changeColor#{$i} {
+        0% {
+            color: #fff;
+        }
 
-
-// @for $i from 1 to 16 {
-//     span:nth-child(#{$i}) {
-//         color: nth($list, ($i % 3) + 1)
-//     }
-// }
+        50% {
+            color: nth($list, $i)
+        }
+    }
+}
