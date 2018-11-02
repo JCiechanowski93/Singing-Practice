@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {
     HashRouter,
-    Route,
-    Link,
-    Switch,
-    NavLink,
-    Redirect
+    Route
 } from 'react-router-dom';
 import '../sass/style.scss';
 import 'bootstrap/dist/css/bootstrap.css'
@@ -26,7 +22,7 @@ const App = () => {
                     <Route exact path="/" component={Main} />
                     <Route path="/:song/:voice" component={Board} />
                 </div>
-                <Footer />
+                <Footer></Footer>
             </div>
         </HashRouter>
     )

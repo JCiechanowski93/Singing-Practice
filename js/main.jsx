@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import {
-    HashRouter,
-    Route,
-    Link,
-    Switch,
-    NavLink,
-    Redirect
-} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import '../sass/style.scss';
 
 
@@ -44,7 +36,6 @@ class Main extends Component {
             return <Redirect to={this.state.redirect} />
         }
         return (<main className="container main_container">
-
             <form onSubmit={this.handleSubmit}>
                 <div className="row">
                     <div className="col-md-4">
@@ -65,7 +56,6 @@ class Main extends Component {
                             </select>
                         </label>
                     </div>
-
                     <div className="col-md-4">
                         <label className="col-md-12">
                             <input className="btn btn-dark  btn-lg btn-block btn_confirm" type="submit" value="Confirm"></input>
