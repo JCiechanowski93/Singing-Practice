@@ -23,7 +23,7 @@ class Board extends Component {
                 this.bellaciaoSopran();
             } else if (voice === "alt" && song === "bellaciao") {
                 this.belleciaoAlt();
-            } else if (voice === "tenor" || voice === "bas" && song === "bellaciao") {
+            } else if (voice === "tenor" && song === "bellaciao" || voice === "bas" && song === "bellaciao") {
                 this.bellaciaoTenor();
             } else if (voice === "sopran"
                 || voice === "alt"
