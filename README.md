@@ -11,3 +11,7 @@ This app is for everyone who would like to try his best and... sing! I myself am
 - Bootstrap
 - SASS
 - Webpack
+
+#### Copyright
+
+Ownership of music sheets and tracks - Cantiamo Tutto ©
