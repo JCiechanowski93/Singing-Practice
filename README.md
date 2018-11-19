@@ -12,6 +12,16 @@ This app is for everyone who would like to try his best and... sing! I myself am
 - SASS
 - Webpack
 
+## Setup
+
+To run the project:
+```
+ 1. npm i
+ 2. $ npm run start
+ 3. Open  local host http://localhost:8080
+```
+
+
 #### Copyright
 
 Ownership of music sheets and tracks - Cantiamo Tutto ©
